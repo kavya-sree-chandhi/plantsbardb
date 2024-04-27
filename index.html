@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denton Plant Factory</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+        }
+
+        header {
+            background-color: #3498db;
+            color: white; /* Light text color for dark background */
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white; /* Light text color for dark background */
+            text-decoration: none;
+        }
+
+        main {
+            padding: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .product {
+            width: 250px;
+            background-color: #e0f2f1;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .product img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .product h3 {
+            margin-top: 10px;
+        }
+
+        .product button {
+            background-color: #2ecc71; /* Ensure sufficient color contrast */
+            color: black; /* Dark text color for light background */
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-container {
+            width: 50%;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .form-container label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-container input,
+        .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+        }
+
+        .form-container textarea {
+            height: 100px;
+        }
+
+        .form-container button {
+            background-color: #3498db; /* Ensure sufficient color contrast */
+            color: white; /* Light text color for dark background */
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #3498db;
+            color: white; /* Light text color for dark background */
+            padding: 20px;
+            text-align: center;
+        }
+
+        .copyright {
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="logo">Denton Plant Factory</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="product">
+                       <img src="https://images.unsplash.com/photo-1591522200444-7d4aa4e30e7a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlLW8!&auto=format&fit=crop&w=500&q=60" alt="Snake Plant">
+            <h3>Snake Plant (Sansevieria trifasciata)</h3>
+            <p>Low maintenance, air purifying, native to tropical Africa</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1569980868-605b8e0b8b5d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlLW8!&auto=format&fit=crop&w=500&q=60" alt="Monstera Deliciosa">
+            <h3>Monstera Deliciosa (Swiss Cheese Plant)</h3>
+            <p>Fast growing vine, large split leaves, native to Central and South America</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="cart">
+            <h2>Your Shopping Cart</h2>
+            </div>
+    </main>
+
+    <section class="contact-us">
+        <h2>Contact Us</h2>
+        <div class="form-container">
+            <form id="contact-form">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="contact_number">Contact Number:</label>
+                <input type="tel" id="contact_number" name="contact_number" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p class="copyright">
+            <span style="color: black;">Copyright &copy; Denton Plant Factory 2024</span>
+        </p>
+    </footer>
+
+    <script>
+        // Add to cart functionality (basic example)
+        const addToCartButtons = document.querySelectorAll('.product button');
+
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Simulate adding item to cart
+                console.log('Item added to cart!');
+                // Update cart display dynamically here
+            });
+        });
+
+        // Contact form submission (basic example)
+        const contactForm = document.getElementById('contact-form');
+
+        contactForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            // Simulate form submission
+            console.log('Form submitted!');
+            // Implement logic to send form data here (e.g., using AJAX)
+
+            // Clear form after submission
+            contactForm.reset();
+        });
+    </script>
+</body>
+</html>
+
